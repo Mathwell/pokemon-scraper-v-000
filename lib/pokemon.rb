@@ -17,7 +17,7 @@ class Pokemon
     #database_connection=SQLite3::Database.new('./db/pokemon.db')
     #database_connection.execute("CREATE TABLE IF NOT EXISTS pokemon(id INTEGER PRIMARY KEY, name TEXT, type TEXT)")
     #id=db.execute("SELECT count() FROM pokemon")[0][0]+1
-    db.execute("INSERT INTO pokemon (name,type) VALUES(?,?,?)", id,name,type)
+    db.execute("INSERT INTO pokemon (name,type) VALUES(?,?,?)", name,type)
   end
 
   def self.find(id,db)
